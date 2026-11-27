@@ -25,6 +25,13 @@ dependencies = [
     "langgraph>=1.2.18",
 ]
 
+
+[tool.ruff]
+extend-exclude = ["useful_functions.py", "Agents/rough_space.py", "Agents/image_check.py", "Tests/ragas_check.py"]
+
+[tool.ruff.lint]
+ignore = ["BLE001", "TRY002"]
+
 [dependency-groups]
 dev = [
     "pytest>=9.2.0",

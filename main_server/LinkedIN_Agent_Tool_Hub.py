@@ -1,8 +1,8 @@
-from langchain.mcp import MCPAdapter
-import asyncio
 import json
-from config.extract_helper import source_text
 
+from langchain.mcp import MCPAdapter
+
+from config.extract_helper import source_text
 
 client = MCPAdapter({
     "linkedin":  {"url": "http://localhost:8001/mcp", "transport": "streamable-http"}

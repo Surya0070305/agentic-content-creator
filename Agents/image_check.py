@@ -1,11 +1,7 @@
-import requests
-
-from dotenv import load_dotenv
-
 import os
 
-
-
+import requests
+from dotenv import load_dotenv
 
 #CONFIG PARAMS
 
@@ -15,7 +11,7 @@ load_dotenv('secrets.env')
 openai_key=os.environ["STABILITY_API_KEY"]
 
 response = requests.post(
-    f"https://api.stability.ai/v2beta/stable-image/generate/ultra",
+    "https://api.stability.ai/v2beta/stable-image/generate/ultra",
     headers={
         "authorization": openai_key,
         "accept": "image/*"

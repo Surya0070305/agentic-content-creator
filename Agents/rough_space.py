@@ -1,13 +1,10 @@
-from importlib.metadata import metadata
 
+import os
+
+import tiktoken
 import trafilatura
 from dotenv import load_dotenv
 from serpapi import GoogleSearch
-import os
-import tiktoken
-
-
-
 
 MAX_TOKENS=6000
 enc = tiktoken.get_encoding('cl100k_base')
