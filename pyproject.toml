@@ -37,3 +37,6 @@ dev = [
     "pytest>=9.2.0",
     "ruff>=0.17.6",
 ]
+[tool.pytest.ini_options]
+pythonpath = ["."]
+markers = ["integration: needs API keys or running MCP servers"]
