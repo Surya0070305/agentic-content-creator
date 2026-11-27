@@ -1,6 +1,9 @@
-from langchain_core.messages import HumanMessage
-from LangGraph.linkedin_agent_node import linkedin_agent_node
 import asyncio
+
+from langchain_core.messages import HumanMessage
+
+from LangGraph.linkedin_agent_node import linkedin_agent_node
+
 
 async def run_test():
 

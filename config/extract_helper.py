@@ -1,5 +1,6 @@
 import json
 
+
 def source_text(data):
     context=[]
     for source in data['sources']:

@@ -1,13 +1,11 @@
-from ragas import SingleTurnSample
-from ragas.metrics import Faithfulness
-from sqlalchemy.orm import evaluator
-import os
 import asyncio
+import os
 from pathlib import Path
+
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
-
-
+from ragas import SingleTurnSample
+from ragas.metrics import Faithfulness
 
 env_path = Path(__file__).parent.parent / "secrets.env"
 load_dotenv(env_path)

@@ -1,29 +1,28 @@
-from importlib.metadata import metadata
 
 # SYS CONFIOG
+import json
+import os
+import uuid
+from pathlib import Path
+
 import llm
+import tiktoken
 import trafilatura
 from dotenv import load_dotenv
-from serpapi import GoogleSearch
-import os
-import tiktoken
-import uuid
-import json
-from pathlib import Path
+from langchain.agents import create_agent
+from langchain.tools import tool
+from langchain_core.messages import ToolMessage
 
 # LANGCHAIN CONFIG
 from langchain_openai import ChatOpenAI
-from langchain.tools import tool
-from langchain.agents import create_agent
-from langchain_core.messages import ToolMessage
+from langfuse import get_client, observe, propagate_attributes
 
 # LANGFUSE CONFIG
 from langfuse.langchain import CallbackHandler
-from langfuse import observe, propagate_attributes
-from langfuse import get_client
 
 # MCP CONFIG
 from mcp.server.mcpserver import MCPServer
+from serpapi import GoogleSearch
 
 #CONFIG PARAMS
 
@@ -203,7 +202,6 @@ def blog_generation(topic, feedback='',previous_draft=''):
             config={"callbacks": [handler]},
         )
 
-        #
         messages=blog_agent_response["messages"]
 
         draft=messages[-1].content
