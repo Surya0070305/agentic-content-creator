@@ -27,4 +27,4 @@ jobs:
         run: uv run ruff check .
 
       - name: Run offline tests
-        run: uv run pytest tests -m "not integration" -v
+        run: uv run pytest Tests -m "not integration" -v
