@@ -3,3 +3,5 @@ secrets.env
 __pycache__
 .idea/
 useful_functions.py
+Tests/
+useful_functions.py

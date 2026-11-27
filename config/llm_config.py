@@ -1,8 +1,9 @@
 # config.py
 import os
+from pathlib import Path
+
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
-from pathlib import Path
 
 env_path = Path(__file__).parent.parent / "secrets.env"
 load_dotenv(env_path) # reads OPENAI_API_KEY from your .env file
